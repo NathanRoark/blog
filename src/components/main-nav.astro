@@ -1,0 +1,60 @@
+---
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
+const {pathname} = Astro.url;
+---
+
+
+<div class="mr-4 hidden md:flex">
+  <a href="/" class="flex items-center space-x-2 md:mr-6">
+    <Icons.logo strokeWidth="32" fill="currentColor" className="h-6 w-6" />
+    <span class="hidden font-bold sm:inline-block">
+      {siteConfig.name}
+    </span>
+  </a>
+  <nav class="flex items-center space-x-6 text-sm font-medium">
+    <a
+      href="/"
+      class={cn(
+        "hidden transition-colors hover:text-foreground/80 md:block",
+        pathname === "/" ? "text-foreground" : "text-foreground/60",
+      )}
+    >
+      Home
+    </a>
+    <a
+      href="/projects"
+      class={cn(
+        "transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/projects")
+          ? "text-foreground"
+          : "text-foreground/60",
+      )}
+    >
+      Projects
+    </a>
+    <a
+      href="/resume"
+      class={cn(
+        "transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/resume")
+          ? "text-foreground"
+          : "text-foreground/60",
+      )}
+    >
+      Resume
+    </a>
+    <a
+      href="/links"
+      class={cn(
+        "transition-colors hover:text-foreground/80",
+        pathname?.startsWith("/links")
+          ? "text-foreground"
+          : "text-foreground/60",
+      )}
+    >
+      Links
+    </a>
+  </nav>
+</div>
