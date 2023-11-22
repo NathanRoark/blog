@@ -1,16 +1,19 @@
 ---
-import MainNav from "@/components/main-nav.astro"
-import { MobileNav } from '@/components/mobile-nav';
-import { ModeToggle } from '@/components/mode-toggle';
+import MainNav from '@/components/main-nav.astro'
+import { MobileNav } from '@/components/mobile-nav'
+import { ModeToggle } from '@/components/mode-toggle'
 ---
 
-<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div class="container flex h-14 items-center ">
-    <MainNav client:load />
+<header
+  class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
+  <div class="container flex h-14 items-center">
+    <MainNav />
     <MobileNav client:load />
-    <div class="flex flex-1 items-center  justify-end space-x-2 md:justify-end">
+    <div class="flex flex-1 items-center justify-end space-x-2 md:justify-end">
       <nav class="flex items-center">
-      <ModeToggle client:load/></nav>
+        <ModeToggle client:load />
+      </nav>
     </div>
   </div>
 </header>

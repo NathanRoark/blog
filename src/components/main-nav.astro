@@ -14,47 +14,18 @@ const {pathname} = Astro.url;
     </span>
   </a>
   <nav class="flex items-center space-x-6 text-sm font-medium">
-    <a
-      href="/"
-      class={cn(
-        "hidden transition-colors hover:text-foreground/80 md:block",
-        pathname === "/" ? "text-foreground" : "text-foreground/60",
-      )}
-    >
-      Home
-    </a>
-    <a
-      href="/projects"
-      class={cn(
-        "transition-colors hover:text-foreground/80",
-        pathname?.startsWith("/projects")
-          ? "text-foreground"
-          : "text-foreground/60",
-      )}
-    >
-      Projects
-    </a>
-    <a
-      href="/resume"
-      class={cn(
-        "transition-colors hover:text-foreground/80",
-        pathname?.startsWith("/resume")
-          ? "text-foreground"
-          : "text-foreground/60",
-      )}
-    >
-      Resume
-    </a>
-    <a
-      href="/links"
-      class={cn(
-        "transition-colors hover:text-foreground/80",
-        pathname?.startsWith("/links")
-          ? "text-foreground"
-          : "text-foreground/60",
-      )}
-    >
-      Links
-    </a>
+  {siteConfig.navLinks.map((link) => (
+      <a
+        href={link.href}
+        class={cn(
+          "transition-colors hover:text-foreground/80",
+          pathname?.startsWith(link.href)
+            ? "text-foreground"
+            : "text-foreground/60",
+        )}
+      >
+        {link.title}
+      </a>
+    ))}
   </nav>
 </div>
