@@ -1,7 +1,7 @@
 ---
 import MainNav from '@/components/main-nav.astro'
 import { MobileNav } from '@/components/mobile-nav'
-import { ModeToggle } from '@/components/mode-toggle'
+import ThemeToggle from '@/components/theme-toggle.astro'
 ---
 
 <header
@@ -10,9 +10,9 @@ import { ModeToggle } from '@/components/mode-toggle'
   <div class="container flex h-14 items-center">
     <MainNav />
     <MobileNav client:load />
-    <div class="flex flex-1 items-center justify-end space-x-2 md:justify-end">
+    <div class="flex flex-1 items-center justify-end space-x-2">
       <nav class="flex items-center">
-        <ModeToggle client:load />
+        <ThemeToggle />
       </nav>
     </div>
   </div>

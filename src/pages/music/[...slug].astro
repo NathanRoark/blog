@@ -1,0 +1,55 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content'
+
+import Layout from '@/layouts/layout.astro'
+import Record from '@/components/Record.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('albums')
+  return posts.map((post: any) => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
+}
+
+type Props = CollectionEntry<'albums'>['data']
+
+const post: {
+  data: {
+    album: string
+    artist: string
+    cover_art_url: string
+    genres: string[]
+    release_date: Date
+    post_date: Date
+  }
+  render: () => Promise<{ Content: any }>
+  slug: string
+} = Astro.props
+
+const { Content } = await post.render()
+---
+
+<Layout title={post.data.album} description={post.data.album + '-' + post.data.artist}>
+  <section>
+    <div
+      class="container mx-auto flex max-w-screen-lg flex-col items-start overflow-hidden border-b border-gray-200 px-6 pb-12 pt-8 dark:border-gray-800 md:flex-row md:items-end lg:px-0"
+    >
+      <Record albumId={post.slug} title={post.data.album} imageUrl={post.data.cover_art_url} />
+      <div class="flex flex-1 flex-col justify-end pt-8">
+        <h1 class="text-5xl font-bold tracking-tight">
+          {post.data.album}
+        </h1>
+        <p class="mt-3 text-3xl">{post.data.artist}</p>
+        <p class="mt-2 text-lg">
+          {post.data.genres[0]} — {post.data.release_date.toDateString()}
+        </p>
+      </div>
+    </div>
+    <div
+      class="md:prose-md prose mx-auto px-6 py-2 dark:prose-invert md:prose-lg xl:prose-xl lg:px-0"
+    >
+      <Content />
+    </div>
+  </section>
+</Layout>

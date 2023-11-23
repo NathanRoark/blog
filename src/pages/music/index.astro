@@ -1,0 +1,35 @@
+---
+import AlbumCard from '@/components/album-card.astro'
+import Layout from '@/layouts/layout.astro'
+
+import { getCollection } from 'astro:content'
+// import type { AlbumQueryData } from '~/types'
+
+//const posts = (await getCollection('albums')).sort((a, b) => a.data.post_date - b.data.post_date)
+
+// Sort by post data after the zod corceion
+const posts = (await getCollection('albums')).sort((a, b) =>
+  new Date(a.data.post_date) > new Date(b.data.post_date) ? -1 : 1,
+)
+---
+
+<Layout title="Favorite Music" description="My favorite albums.">
+  <section class="py-8">
+    <div
+      class="container mx-auto flex max-w-screen-lg flex-wrap items-center px-6 pb-12 pt-4 lg:px-0"
+    >
+      <div class="grid w-full grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+        {
+          posts.map((post: any) => (
+            <AlbumCard
+              id={post.slug}
+              name={post.data.album}
+              artist={post.data.artist}
+              image_url={post.data.cover_art_url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
