@@ -4,10 +4,26 @@ import Layout from '@/layouts/layout.astro'
 ---
 
 <Layout>
-  <body class="flex min-h-screen min-w-full flex-col items-center justify-center">
-    <div class="flex flex-col items-center justify-center space-y-4 py-8">
-      <h1 class="text-4xl md:text-6xl">Nathan's Blog</h1>
-      <h2 class="text-2xl md:text-4xl">Made with Astro</h2>
+  <div
+    class="container mx-auto flex h-screen w-full max-w-3xl flex-col items-start gap-y-12 px-4 pb-12 pt-4 lg:px-0"
+  >
+    <div class="px-auto py-2">
+      <h1 class="py-2 text-4xl font-bold">Nathan's Blog</h1>
+      <p class="text-xl">
+        This is a blog for me to post about music, books and movies that I liked.
+      </p>
     </div>
-  </body>
+    <div class="px-auto items-start">
+      <h1 class="py-2 text-2xl font-bold">Recent Music Posts</h1>
+      <p class="text-lg">TODO: Add recent music posts here</p>
+    </div>
+    <div class="px-auto items-start">
+      <h1 class="py-2 text-2xl font-bold">Recent Book Posts</h1>
+      <p class="text-lg">TODO: Add recent book posts here</p>
+    </div>
+    <div class="px-auto items-start">
+      <h1 class="py-2 text-2xl font-bold">Recent Movie Posts</h1>
+      <p class="text-lg">TODO: Add recent movie posts here</p>
+    </div>
+  </div>
 </Layout>

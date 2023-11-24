@@ -1,14 +1,19 @@
 ---
-import '@/styles/globals.css'
-import { ViewTransitions } from 'astro:transitions'
 import BaseHead from '@/components/base-head.astro'
 import Header from '@/components/header.astro'
+
+interface Props {
+  title?: string | undefined
+  description?: string | undefined
+  ogImage?: URL | undefined
+}
+
+const { title, description, ogImage } = Astro.props
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
-    <BaseHead />
-    <ViewTransitions transition:persist />
+    <BaseHead title={title} description={description} ogImage={ogImage} />
   </head>
   <body class="no-scrollbar">
     <Header />

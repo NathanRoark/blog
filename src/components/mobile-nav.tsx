@@ -24,7 +24,7 @@ export function MobileNav() {
       <SheetContent side="left" className="pr-0">
         <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
           <Icons.logo strokeWidth="32" fill="currentColor" className="h-6 w-6" />
-          <span className="pl-2 font-bold">{siteConfig.name}</span>
+          <span className="pl-2 font-bold">{siteConfig.title}</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
