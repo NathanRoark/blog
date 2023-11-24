@@ -38,5 +38,5 @@ import { Button } from '@/components/ui/button'
 
   document.getElementById('themeToggle').addEventListener('click', handleToggleClick)
 
-  document.addEventListener('astro:after-swap', () => handleToggleClick())
+  document.addEventListener('astro:after-swap', () => handleToggleClick(), { once: true })
 </script>

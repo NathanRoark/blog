@@ -1,8 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
-
 import Layout from '@/layouts/layout.astro'
-import Record from '@/components/Record.astro'
+import AlbumArt from '@/components/album-art.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('albums')
@@ -12,20 +11,9 @@ export async function getStaticPaths() {
   }))
 }
 
-type Props = CollectionEntry<'albums'>['data']
+type Props = CollectionEntry<'albums'>
 
-const post: {
-  data: {
-    album: string
-    artist: string
-    cover_art_url: string
-    genres: string[]
-    release_date: Date
-    post_date: Date
-  }
-  render: () => Promise<{ Content: any }>
-  slug: string
-} = Astro.props
+const post: Props = Astro.props
 
 const { Content } = await post.render()
 ---
@@ -35,7 +23,7 @@ const { Content } = await post.render()
     <div
       class="container mx-auto flex max-w-screen-lg flex-col items-start overflow-hidden border-b border-gray-200 px-6 pb-12 pt-8 dark:border-gray-800 md:flex-row md:items-end lg:px-0"
     >
-      <Record albumId={post.slug} title={post.data.album} imageUrl={post.data.cover_art_url} />
+      <AlbumArt albumId={post.slug} title={post.data.album} imageUrl={post.data.cover_art_url} />
       <div class="flex flex-1 flex-col justify-end pt-8">
         <h1 class="text-5xl font-bold tracking-tight">
           {post.data.album}

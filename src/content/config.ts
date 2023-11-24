@@ -25,4 +25,13 @@ const albums = defineCollection({
 	}),
 })
 
+export type album = {
+	artist: string
+	album: string
+	release_date: Date
+	post_date: Date
+	cover_art_url: string
+	genres: string[]
+}
+
 export const collections = { blog, albums }
