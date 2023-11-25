@@ -17,6 +17,7 @@ const books = defineCollection({
     published: z.coerce.date(),
     genres: z.array(z.string()),
     cover_image: z.string(),
+    read: z.string(),
   }),
 })
 
@@ -26,6 +27,7 @@ export type book = {
   published: Date
   genres: string[]
   cover_image: URL
+  read: string
 }
 
 const albums = defineCollection({

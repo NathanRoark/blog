@@ -6,34 +6,70 @@ import { Image } from 'astro:assets'
 
 import { getCollection } from 'astro:content'
 
-const albumPosts = (await getCollection('albums')).sort((a, b) =>
-  new Date(a.data.release_date) > new Date(b.data.release_date) ? -1 : 1,
-)
+const musicPosts = (await getCollection('albums'))
+  .sort((a, b) => (new Date(a.data.post_date) > new Date(b.data.post_date) ? -1 : 1))
+  .slice(0, 8)
 
-const bookPosts = (await getCollection('books')).sort((a, b) =>
-  new Date(a.data.published) > new Date(b.data.published) ? -1 : 1,
-)
+const bookPosts = (await getCollection('books'))
+  .sort((a, b) => (new Date(a.data.read) > new Date(b.data.read) ? -1 : 1))
+  .slice(0, 8)
 ---
 
 <Layout>
   <div
-    class="container mx-auto flex h-screen w-full max-w-3xl flex-col items-start gap-y-12 px-4 pb-12 pt-4 lg:px-0"
+    class="container mx-auto flex h-screen w-full max-w-4xl flex-col items-start gap-y-12 px-4 pt-4 lg:px-0"
   >
     <div class="px-auto py-2">
-      <h1 class="py-2 text-4xl font-bold">Nathan's Blog</h1>
+      <h1 class="py-4 text-6xl font-bold">Nathan's Blog</h1>
       <p class="text-xl">
-        This is a blog for me to post about music, books and movies that I liked.
+        This is a blog for me to post about music, books and movies that I like.
       </p>
     </div>
-    <div class="px-auto items-start">
-      <h1 class="py-2 text-2xl font-bold">Recent Music Posts</h1>
-      <p class="text-lg">TODO: Add recent music posts here</p>
+    <div class="px-auto items-start space-y-4">
+      <a href="music/" class="text-4xl font-bold hover:underline">Recent Music Posts</a>
+      <div class="grid grid-cols-3 gap-2 lg:grid-cols-4">
+        {
+          musicPosts.map((post: any) => (
+            <a href={`/music/${post.slug}`} class="flex flex-col">
+              <div>
+                <Image
+                  class="rounded shadow"
+                  src={post.data.cover_art_url}
+                  alt={post.data.album}
+                  width="200"
+                  height="200"
+                />
+              </div>
+              <p class="truncate pt-4 font-semibold">{post.data.album}</p>
+              <p class="pt-1">{post.data.artist}</p>
+            </a>
+          ))
+        }
+      </div>
     </div>
-    <div class="px-auto items-start">
-      <h1 class="py-2 text-2xl font-bold">Recent Book Posts</h1>
-      <p class="text-lg">TODO: Add recent book posts here</p>
+    <div class="px-auto items-start space-y-4">
+      <a href="books/" class="py-4 text-4xl font-bold hover:underline">Recent Book Posts</a>
+      <div class="grid grid-cols-2 gap-2 lg:grid-cols-4">
+        {
+          bookPosts.map((post: any) => (
+            <a href={`/books/${post.slug}`} class="flex flex-col">
+              <div>
+                <Image
+                  class="rounded shadow"
+                  src={post.data.cover_image}
+                  alt={post.data.title}
+                  width="200"
+                  height="200"
+                />
+              </div>
+              <p class="truncate pt-4 font-semibold">{post.data.title}</p>
+              <p class="pt-1">{post.data.author}</p>
+            </a>
+          ))
+        }
+      </div>
     </div>
-    <div class="px-auto items-start">
+    <div class="px-auto items-start pb-32">
       <h1 class="py-2 text-2xl font-bold">Recent Movie Posts</h1>
       <p class="text-lg">Coming Soon...</p>
     </div>
