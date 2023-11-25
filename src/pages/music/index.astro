@@ -5,10 +5,8 @@ import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('albums')).sort((a, b) =>
-  new Date(a.data.post_date) > new Date(b.data.post_date) ? -1 : 1,
+  new Date(a.data.release_date) > new Date(b.data.release_date) ? -1 : 1,
 )
-
-
 ---
 
 <Layout title="Favorite Albums" description="My favorite albums.">

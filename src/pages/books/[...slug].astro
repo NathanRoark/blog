@@ -44,7 +44,14 @@ const { Content } = await post.render()
   <div
     class="md:prose-md prose mx-auto px-6 py-2 dark:prose-invert md:prose-lg xl:prose-xl lg:px-0"
   >
-    <a href="/books/" class='dark:text-gray-300 text-4xl hover:underline-offset-4 '>back</a>
+    <a href="/books/" class="group no-underline text-4xl dark:text-gray-300 dark:hover:text-gray-100 border-b border-white ">
+      <span
+        class="inline-block rotate-180 transition-transform group-hover:-translate-x-1 motion-reduce:transform-none"
+      >
+        -&gt
+      </span>
+      <span class="no-underline">back</span>
+    </a>
     <Content />
   </div>
 </Layout>

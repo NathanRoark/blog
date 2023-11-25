@@ -1,6 +1,18 @@
 ---
 import '@/styles/globals.css'
 import Layout from '@/layouts/layout.astro'
+
+import { Image } from 'astro:assets'
+
+import { getCollection } from 'astro:content'
+
+const albumPosts = (await getCollection('albums')).sort((a, b) =>
+  new Date(a.data.release_date) > new Date(b.data.release_date) ? -1 : 1,
+)
+
+const bookPosts = (await getCollection('books')).sort((a, b) =>
+  new Date(a.data.published) > new Date(b.data.published) ? -1 : 1,
+)
 ---
 
 <Layout>
@@ -23,7 +35,7 @@ import Layout from '@/layouts/layout.astro'
     </div>
     <div class="px-auto items-start">
       <h1 class="py-2 text-2xl font-bold">Recent Movie Posts</h1>
-      <p class="text-lg">TODO: Add recent movie posts here</p>
+      <p class="text-lg">Coming Soon...</p>
     </div>
   </div>
 </Layout>

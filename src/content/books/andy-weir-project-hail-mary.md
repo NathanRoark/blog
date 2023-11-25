@@ -1,7 +1,7 @@
 ---
 author: Andy Weir
-title: Project Hail Mary
-published: '2021-05-04'
+title: The Martian
+published: 'Feb 11 14'
 genres: ['Science Fiction', 'Apocalyptic Fiction']
-cover_image: /assets/books/andy-weir-project-hail-mary.jpg
+cover_image: /assets/books/andy-weir-the-martian.jpg
 ---

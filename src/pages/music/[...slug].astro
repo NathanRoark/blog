@@ -1,8 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Layout from '@/layouts/layout.astro'
-// import AlbumArt from '@/components/album-art.astro'
 import { Image } from 'astro:assets'
+
 export async function getStaticPaths() {
   const posts = await getCollection('albums')
   return posts.map((post: any) => ({
@@ -45,7 +45,17 @@ const { Content } = await post.render()
   <div
     class="md:prose-md prose mx-auto px-6 py-2 dark:prose-invert md:prose-lg xl:prose-xl lg:px-0"
   >
-    <a href="/music/" class="text-4xl hover:underline-offset-4 dark:text-gray-300">back</a>
+    <a
+      href="/books/"
+      class="group border-b border-white text-4xl no-underline dark:text-gray-300 dark:hover:text-gray-100"
+    >
+      <span
+        class="inline-block rotate-180 transition-transform group-hover:-translate-x-1 motion-reduce:transform-none"
+      >
+        -&gt
+      </span>
+      <span class="no-underline">back</span>
+    </a>
     <Content />
   </div>
 </Layout>
