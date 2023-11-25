@@ -3,7 +3,7 @@ artist: "Della Zyr"
 album: "모호함 속의 너 [Nebulous You]"
 release_date: "2022-12-15"
 genres: ["Dream Pop", "Post-Rock", "Shoegaze", "Folktronica"]
-cover_art_url: "/album_art/della-zyr-nebulous-you.jpg"
+cover_art_url: "/assets/music/della-zyr-nebulous-you.jpg"
 post_date: "2022-01-01"
 ---
 

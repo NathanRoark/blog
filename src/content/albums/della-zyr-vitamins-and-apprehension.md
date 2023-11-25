@@ -3,7 +3,7 @@ artist: 'Della Zyr'
 album: '비타민과 우려 Vitamins and Apprehension'
 release_date: '2022-01-27'
 genres: ['Dream Pop', 'Shoegaze', 'Indie Folk', 'Post-Rock']
-cover_art_url: '/album_art/della-zyr-vitamins-and-apprehension.jpg'
+cover_art_url: '/assets/music/della-zyr-vitamins-and-apprehension.jpg'
 post_date: 'Oct 23 23'
 ---
 

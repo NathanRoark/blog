@@ -3,7 +3,7 @@ artist: "Swordfish"
 album: "Rodia"
 release_date: "2017-05-05"
 genres: ["Midwest Emo", "Indie Rock"]
-cover_art_url: "/album_art/swordfish-rodia.jpg"
+cover_art_url: "/assets/music/swordfish-rodia.jpg"
 post_date: "2022-01-01"
 ---
 

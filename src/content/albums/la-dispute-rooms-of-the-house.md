@@ -4,7 +4,7 @@ album: Rooms of the House
 release_date: "2014-03-18"
 post_date: "2023-08-06"
 genres: ["Post-Hardcore", "Screamo", "Spoken Word"]
-cover_art_url: "/album_art/la-dispute-rooms-of-the-house.webp"
+cover_art_url: "/assets/music/la-dispute-rooms-of-the-house.webp"
 ---
 
 ## Rooms of the House

@@ -3,7 +3,7 @@ artist: "Tokyopill"
 album: "Virtual Death 9 5"
 release_date: "2021-07-29"
 genres: ["Breakcore", "Atmospheric Drum and Bass", "Electronic"]
-cover_art_url: "/album_art/tokyopill-virtual-death-9-5.jpg"
+cover_art_url: "/assets/music/tokyopill-virtual-death-9-5.jpg"
 post_date: "2022-01-01"
 ---
 

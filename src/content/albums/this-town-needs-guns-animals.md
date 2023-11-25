@@ -4,7 +4,7 @@ album: Animals
 release_date: "2008-10-13"
 post_date: "2023-08-06"
 genres: ["Midwest Emo" , "Math Rock", "Indie Rock"]
-cover_art_url: "/album_art/this-town-needs-guns-animals.webp"
+cover_art_url: "/assets/music/this-town-needs-guns-animals.webp"
 ---
 
 ## Animals

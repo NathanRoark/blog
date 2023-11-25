@@ -3,7 +3,7 @@ artist: "Calamine"
 album: "Calamine"
 release_date: "1999-01-01"
 genres: ["Indie Rock", "Midwest Emo"]
-cover_art_url: "/album_art/calamine-calamine.jpg"
+cover_art_url: "/assets/music/calamine-calamine.jpg"
 post_date: "2023-07-31"
 ---
 

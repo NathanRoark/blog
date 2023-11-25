@@ -11,7 +11,7 @@ genres:
     "Post-Industrial",
     "Gothic Rock",
   ]
-cover_art_url: "/album_art/have-a-nice-life-deathconsciousness.jpg"
+cover_art_url: "/assets/music/have-a-nice-life-deathconsciousness.jpg"
 post_date: "2022-01-01"
 ---
 

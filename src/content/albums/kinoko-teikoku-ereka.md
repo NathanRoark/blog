@@ -3,7 +3,7 @@ artist: "きのこ帝国 Kinoko Teikoku"
 album: "ユーリカ (Eureka)"
 release_date: "2012-05-09"
 genres: ["Indie Rock", "J-Rock", "Dream Pop", Shoegaze]
-cover_art_url: "/album_art/kinoko-teikoku-eureka.jpg"
+cover_art_url: "/assets/music/kinoko-teikoku-eureka.jpg"
 post_date: "2022-02-01"
 ---
 

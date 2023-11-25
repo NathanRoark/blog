@@ -4,7 +4,7 @@ album: "ワールドイズユアーズ (World Is Yours)"
 release_date: "2009-01-21"
 genres: ["J-Rock", "Post Hardcore", "Noise Rock", "Shoegaze"]
 post_date: "2022-01-01"
-cover_art_url: "/album_art/mass-of-the-fermenting-dregs-world-is-yours.jpg"
+cover_art_url: "/assets/music/mass-of-the-fermenting-dregs-world-is-yours.jpg"
 ---
 
 ## Track Listing

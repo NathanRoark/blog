@@ -3,7 +3,7 @@ artist: "Kara's Walk Home"
 album: "I Don't Want to Look at the Stars"
 release_date: "2015-11-10"
 genres: ["Midwest Emo", "Post-Rock", "Post Hardcore"]
-cover_art_url: "/album_art/karas-walk-home-i-dont-want-to-look-at-the-stars.jpg"
+cover_art_url: "/assets/music/karas-walk-home-i-dont-want-to-look-at-the-stars.jpg"
 post_date: "2023-01-01"
 ---
 

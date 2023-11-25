@@ -4,7 +4,7 @@ album: 'アイランド (Island)'
 release_date: '2022-07-27'
 post_date: 'Jan 01 23'
 genres: ['Blackgaze', 'Post Hardcore', 'Screamo', 'J-Rock', 'Post Metal']
-cover_art_url: '/album_art/asunojokei-island.jpg'
+cover_art_url: '/assets/music/asunojokei-island.jpg'
 ---
 
 ## Thoughts

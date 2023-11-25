@@ -3,7 +3,7 @@ artist: "Crying"
 album: "Beyond the Fleeting Gales"
 release_date: "2016-10-14"
 genres: ["Power Pop", "Progressive Pop", "Emo", "Indie Rock", "Post-Rock", "Shoegaze", "Chiptune"]
-cover_art_url: "/album_art/crying-beyond-the-fleeting-gales.jpg"
+cover_art_url: "/assets/music/crying-beyond-the-fleeting-gales.jpg"
 post_date: "2017-01-01"
 ---
 

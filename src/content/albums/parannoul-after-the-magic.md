@@ -13,7 +13,7 @@ genres:
     "Noise Pop",
     "Neo-Psychedelia",
   ]
-cover_art_url: "/album_art/parannoul-after-the-magic.jpg"
+cover_art_url: "/assets/music/parannoul-after-the-magic.jpg"
 post_date: "2022-01-01"
 ---
 

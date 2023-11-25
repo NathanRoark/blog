@@ -11,7 +11,7 @@ genres:
     "Acid Jazz",
     "Neo-Psychedelia",
   ]
-cover_art_url: "/album_art/thundercat-drunk.jpg"
+cover_art_url: "/assets/music/thundercat-drunk.jpg"
 post_date: "2022-01-01"
 ---
 

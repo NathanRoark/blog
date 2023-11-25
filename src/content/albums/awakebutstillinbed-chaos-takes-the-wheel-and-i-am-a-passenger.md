@@ -4,7 +4,7 @@ album: 'chaos takes the wheel and i am a passenger'
 release_date: 'Oct 20 23'
 post_date: 'Nov 24 23'
 genres: ['Punk', 'Emo', 'Extremo', 'Indie']
-cover_art_url: '/album_art/awakebutstillinbed-chaos-takes-the-wheel-and-i-am-a-passenger.jpg'
+cover_art_url: '/assets/music/awakebutstillinbed-chaos-takes-the-wheel-and-i-am-a-passenger.jpg'
 ---
 
 ## Thoughts

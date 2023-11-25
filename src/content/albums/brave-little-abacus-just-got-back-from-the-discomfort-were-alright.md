@@ -4,7 +4,7 @@ album: "Just Got Back From the Discomfort (We're Alright)"
 release_date: "2010-05-29"
 post_date: "2023-01-01"
 genres: ["Midwest Emo", "Experemental Rock", "Math Rock"]
-cover_art_url: "/album_art/brave-little-abacus-just-got-back-from-the-discomfort-were-alright.jpg"
+cover_art_url: "/assets/music/brave-little-abacus-just-got-back-from-the-discomfort-were-alright.jpg"
 ---
 
 ## Thoughts

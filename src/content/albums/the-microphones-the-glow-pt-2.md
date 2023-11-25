@@ -10,7 +10,7 @@ genres:
     "Advent-Folk",
     "Singer Songwriter",
   ]
-cover_art_url: "/album_art/the-microphones-the-glow-pt-2.jpg"
+cover_art_url: "/assets/music/the-microphones-the-glow-pt-2.jpg"
 post_date: "2022-01-01"
 ---
 

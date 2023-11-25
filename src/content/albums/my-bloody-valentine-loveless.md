@@ -3,7 +3,7 @@ artist: "My Bloody Valentine"
 album: "Loveless"
 release_date: "1991-11-11"
 genres: ["Shoegaze", "Noise Pop", "Dream Pop", "Neo-Psychedelia"]
-cover_art_url: "/album_art/my-bloody-valentine-loveless.png"
+cover_art_url: "/assets/music/my-bloody-valentine-loveless.png"
 post_date: "2022-01-01"
 ---
 
