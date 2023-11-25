@@ -4,11 +4,9 @@ import { Image } from 'astro:assets'
 
 import { getCollection } from 'astro:content'
 
-const posts = (await getCollection('albums')).sort((a, b) =>
-  new Date(a.data.post_date) > new Date(b.data.post_date) ? -1 : 1,
+const posts = (await getCollection('books')).sort((a, b) =>
+  new Date(a.data.published) > new Date(b.data.published) ? -1 : 1,
 )
-
-
 ---
 
 <Layout title="Favorite Albums" description="My favorite albums.">
@@ -17,18 +15,18 @@ const posts = (await getCollection('albums')).sort((a, b) =>
   >
     {
       posts.map((post: any) => (
-        <a href={`/music/${post.slug}`} class="flex flex-col">
-          <div transition:name={`record-${post.slug}`}>
+        <a href={`/books/${post.slug}`} class="flex flex-col">
+          <div transition:name={`book-${post.slug}`}>
             <Image
               class="rounded shadow"
-              src={post.data.cover_art_url}
-              alt={post.data.album}
+              src={post.data.cover_image}
+              alt={post.data.title}
               width="400"
               height="400"
             />
           </div>
-          <p class="truncate pt-4 font-semibold">{post.data.album}</p>
-          <p class="pt-1">{post.data.artist}</p>
+          <p class="truncate pt-4 font-semibold">{post.data.title}</p>
+          <p class="pt-1">{post.data.author}</p>
         </a>
       ))
     }

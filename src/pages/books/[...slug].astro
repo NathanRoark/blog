@@ -1,44 +1,43 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
 import Layout from '@/layouts/layout.astro'
-// import AlbumArt from '@/components/album-art.astro'
 import { Image } from 'astro:assets'
 export async function getStaticPaths() {
-  const posts = await getCollection('albums')
+  const posts = await getCollection('books')
   return posts.map((post: any) => ({
     params: { slug: post.slug },
     props: post,
   }))
 }
 
-type Props = CollectionEntry<'albums'>
+type Props = CollectionEntry<'books'>
 
 const post: Props = Astro.props
 
 const { Content } = await post.render()
 ---
 
-<Layout title={post.data.album} description={post.data.album + '-' + post.data.artist}>
+<Layout title={post.data.title} description={post.data.title + '-' + post.data.author}>
   <div
     class="container mx-auto flex max-w-screen-lg flex-col items-start overflow-hidden border-b border-gray-800 px-6 pb-12 pt-8 md:flex-row md:items-end lg:px-0"
   >
     <div class="relative mr-32 w-72 shadow-xl md:w-auto">
       <Image
-        src={post.data.cover_art_url}
+        src={post.data.cover_image}
         alt={post.slug}
         width="300"
         height="300"
-        class="tag-album-cover relative block aspect-square rounded-md bg-white"
-        style={`view-transition-name: record-${post.slug};`}
+        class="relative block rounded-md bg-white"
+        style={`view-transition-name: book-${post.slug};`}
       />
     </div>
     <div class="flex flex-1 flex-col justify-end pt-8">
       <h1 class="text-5xl font-bold tracking-tight">
-        {post.data.album}
+        {post.data.title}
       </h1>
-      <p class="mt-3 text-3xl">{post.data.artist}</p>
+      <p class="mt-3 text-3xl">{post.data.author}</p>
       <p class="mt-2 text-lg">
-        {post.data.genres[0]} — {post.data.release_date.toDateString()}
+        {post.data.genres[0]} — {post.data.published.toDateString()}
       </p>
     </div>
   </div>
