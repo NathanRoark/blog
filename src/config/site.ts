@@ -30,16 +30,12 @@ export const siteConfig: SiteConfig = {
       href: '/music',
     },
     {
+      title: 'Anime',
+      href: '/anime',
+    },
+    {
       title: 'Books',
       href: '/books',
-    },
-    {
-      title: 'Movies',
-      href: '/movies',
-    },
-    {
-      title: 'About',
-      href: '/about',
     },
   ],
   links: {

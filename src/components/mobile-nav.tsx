@@ -21,6 +21,9 @@ export function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
+      <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
+        <span className="pl-2 font-bold">{siteConfig.title}</span>
+      </MobileLink>
       <SheetContent side="left" className="pr-0">
         <MobileLink href="/" className="flex items-center" onOpenChange={setOpen}>
           <Icons.logo strokeWidth="32" fill="currentColor" className="h-6 w-6" />
