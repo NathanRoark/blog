@@ -27,7 +27,9 @@ const bookPosts = (await getCollection('books'))
     </div>
     <div class="px-auto items-start space-y-4">
       <a href="music/" class="text-4xl font-bold hover:underline">Recent Music Posts</a>
-      <div class="grid grid-cols-3 gap-2 lg:grid-cols-4">
+      <div
+        class="px-auto container mx-auto grid w-full max-w-3xl grid-cols-2 flex-wrap items-center gap-6 px-4 pb-12 pt-4 sm:grid-cols-3 md:grid-cols-4 lg:px-0"
+      >
         {
           musicPosts.map((post: any) => (
             <a href={`/music/${post.slug}`} class="flex flex-col">
@@ -36,8 +38,8 @@ const bookPosts = (await getCollection('books'))
                   class="rounded shadow"
                   src={post.data.cover_art_url}
                   alt={post.data.album}
-                  width="200"
-                  height="200"
+                  width="400"
+                  height="400"
                 />
               </div>
               <p class="truncate pt-4 font-semibold">{post.data.album}</p>
@@ -49,7 +51,9 @@ const bookPosts = (await getCollection('books'))
     </div>
     <div class="px-auto items-start space-y-4">
       <a href="books/" class="py-4 text-4xl font-bold hover:underline">Recent Book Posts</a>
-      <div class="grid grid-cols-2 gap-2 lg:grid-cols-4">
+      <div
+        class="px-auto container mx-auto grid w-full max-w-3xl grid-cols-2 flex-wrap items-center gap-6 px-4 pb-12 pt-4 sm:grid-cols-3 md:grid-cols-4 lg:px-0"
+      >
         {
           bookPosts.map((post: any) => (
             <a href={`/books/${post.slug}`} class="flex flex-col">
@@ -58,8 +62,8 @@ const bookPosts = (await getCollection('books'))
                   class="rounded shadow"
                   src={post.data.cover_image}
                   alt={post.data.title}
-                  width="200"
-                  height="200"
+                  width="400"
+                  height="400"
                 />
               </div>
               <p class="truncate pt-4 font-semibold">{post.data.title}</p>
