@@ -15,8 +15,6 @@ type Props = CollectionEntry<'anime'>
 const post: Props = Astro.props
 
 const { Content } = await post.render()
-
-console.log('...slug', post.slug)
 ---
 
 <Layout title={post.data.title} description={post.data.title}>

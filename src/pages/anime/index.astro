@@ -5,7 +5,6 @@ import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('anime')).sort((a, b) => {
-  // console.log(a.slug)
   let aDate: Date
   if (a.data.releaseDate) aDate = a.data.releaseDate
   else if (a.data.startDate) aDate = a.data.startDate
