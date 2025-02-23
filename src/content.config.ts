@@ -96,5 +96,23 @@ export type anime = {
   studio: string
 }
 
-export const collections = { albums, books, anime }
+const movies = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    release_date: z.coerce.date(),
+    cover_art_url: z.string(),
+  }),
+})
+
+export type movie = {
+  title: string
+  description: string
+  release_date: Date
+  cover_art_url: string
+}
+
+// ...existing code...
+
+export const collections = { albums, books, anime, movies }
 export default collections
