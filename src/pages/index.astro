@@ -3,7 +3,6 @@ import '@/styles/globals.css'
 import Layout from '@/layouts/layout.astro'
 
 import { Image } from 'astro:assets'
-
 import { getCollection } from 'astro:content'
 
 const musicPosts = (await getCollection('albums'))
